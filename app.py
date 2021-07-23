@@ -15,7 +15,7 @@ import numpy as np
 
 from bs4 import BeautifulSoup
 
-nltk.download('punkt')
+#nltk.download('punkt')
 # load the reviews
 # data courtesy of http://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html
 positive_reviews = BeautifulSoup(open('positive_review.txt').read())

@@ -83,6 +83,11 @@ def test_spinner(review):
 from flask import Flask
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+  return "HELLO"
+  
+
 @app.route('/spinner/<sen>')
 def spinner(sen):
   gen=test_spinner(sen)

@@ -85,7 +85,7 @@ app = Flask(__name__)
 
 @app.route('/spinner/<sen>')
 def spinner(sen):
-  test_spinner(sen)
+  gen=test_spinner(sen)
   result={}
   result["spinned"]=gen
   return jsonify(result)

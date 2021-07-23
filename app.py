@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 nltk.download('punkt')
 # load the reviews
 # data courtesy of http://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html
-positive_reviews = BeautifulSoup(open('positive.review.txt').read())
+positive_reviews = BeautifulSoup(open('positive_review.txt').read())
 positive_reviews = positive_reviews.findAll('review_text')
 
 
@@ -74,7 +74,7 @@ def test_spinner(review):
                 w = random_sample(trigram_probabilities[k])
                 tokens[i+1] = w
     print("Spun:")
-    gen=" ".join(tokens).replace(" .", ".").replace(" '", "'").replace(" ,", ",").replace("$ ", "$").replace(" !", "!"))
+    gen=" ".join(tokens).replace(" .", ".").replace(" '", "'").replace(" ,", ",").replace("$ ", "$").replace(" !", "!")
     return gen
     
 
